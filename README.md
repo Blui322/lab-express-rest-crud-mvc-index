@@ -189,6 +189,10 @@ Once you've built the route in each controller, you should be able to visit the 
 
 Add a catch-all route so that when the visited URL does not match any of the routes, a 404 response is sent. You may also wish to respond with a message for the user, such as `"Sorry, no page found!"`.
 
+### Test Your Routes
+
+You should be able to test your routes both in the Browser (since every call is a GET call) or in Postman. You should try Postman since you will need to test other routes (POST, PUT, DELETE) in Postman.
+
 ## Bonuses
 
 Create a `GET` route at `/locations/people` that organizes each person according to their location. The JSON data outputted should look like the data below. Study the data to figure out the connection.

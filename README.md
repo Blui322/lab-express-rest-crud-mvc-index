@@ -90,18 +90,21 @@ For each model, make a folder with the appropriate file name. For example, for t
 ```js
 [
   {
+    id:1,
     name: "Najee",
     role: "member",
     plan: "gold",
     mainLocation: "11101",
   },
   {
+    id:2
     name: "Salina",
     role: "staff",
     plan: "staff",
     mainLocation: "11101",
   },
   {
+    id:3
     name: "Amandine",
     role: "member",
     plan: "silver",
@@ -115,16 +118,19 @@ For each model, make a folder with the appropriate file name. For example, for t
 ```js
 [
   {
+    id: 1,
     type: "bronze",
     price: 100,
     extras: [],
   },
   {
+    id: 2,
     type: "silver",
     price: 200,
     extras: ["Laundry service", "Free smoothie each visit"],
   },
   {
+    id: 3,
     type: "gold",
     price: 300,
     extras: ["Personal locker", "Monogrammed robe", "Sauna access"],
@@ -137,6 +143,7 @@ For each model, make a folder with the appropriate file name. For example, for t
 ```js
 [
   {
+    id:1,
     brand: "Bowflex",
     model: "Bowflexer 4000",
     type: "Extreme Fitness Bench",
@@ -144,6 +151,7 @@ For each model, make a folder with the appropriate file name. For example, for t
     location: 11101,
   },
   {
+    id:2,
     brand: "Bowflex",
     model: "Bowflexer 4000",
     type: "Extreme Fitness Bench",
@@ -151,6 +159,7 @@ For each model, make a folder with the appropriate file name. For example, for t
     location: 11101,
   },
   {
+    id:3
     brand: "Bowflex",
     model: "Bowflexer 4000",
     type: "Extreme Fitness Bench",
@@ -164,7 +173,10 @@ For each model, make a folder with the appropriate file name. For example, for t
 
 Following the same file and folder structure as in class, create the correct files. For example, the `locations` resource should be in the `controllers/` directory with the name `locations.controller.js`.
 
-Each controller should serve an index (an array of all of the objects of the resource) at the matching route.
+Each controller should have an endpoint returning the json object with a key and an array value for that resource.
+
+Each controller should have a dynamic endpoint returning a json object based on the requested id
+This controller should return a json object with a message - 'Nothing Found', if the id does not exist.
 
 Once you've built the route in each controller, you should be able to visit the URLs below and see data for the associated resource.
 
@@ -179,7 +191,7 @@ Add a catch-all route so that when the visited URL does not match any of the rou
 
 ## Bonuses
 
-Create a `GET` route at `/locations/people` that organizes each person according to their location. The data outputted should look like the data below. Study the data to figure out the connection.
+Create a `GET` route at `/locations/people` that organizes each person according to their location. The JSON data outputted should look like the data below. Study the data to figure out the connection.
 
 ```js
 [

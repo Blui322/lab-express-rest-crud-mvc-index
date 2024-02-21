@@ -16,17 +16,7 @@ Your job will be to be to begin building a custom app that keeps track of numero
    npm install
    ```
 
-   This will install the libraries needed to run the tests.
-
 1. Open up the repository in VSCode. Follow the instructions below to complete the Lab.
-
-### Tests
-
-You can run the following command from the command line to run the tests. You will need to be in the root directory of your local directory.
-
-```
-npm test
-```
 
 ## Instructions
 
@@ -37,21 +27,18 @@ To complete this lab, you must create a series of static data models and control
 Your goal is to organize your folders and files following the MVC architecture you've learned in class. Your final folder and file structure should look like this:
 
 ```
-├── __tests__/
-│  └── app.test.js
-│  └── sample-data.js
 ├── controllers/
 │  ├── locations.controller.js
 │  ├── machines.controller.js
 │  ├── persons.controller.js
 │  ├── plans.controller.js
-│  └── special-events.controller.js
+│
 ├── models/
 │  ├── location.model.js
 │  ├── machine.model.js
 │  ├── person.model.js
 │  ├── plan.model.js
-│  └── special-event.model.js
+│
 ├── .env
 ├── node_modules/
 ├── app.js
@@ -173,30 +160,6 @@ For each model, make a folder with the appropriate file name. For example, for t
 ];
 ```
 
-#### Special events data
-
-```js
-[
-  {
-    name: "Cinco De Muscles",
-    date: "May 5, 2022",
-    description: "Attend up to 5 fitness classes in one day, no extra cost!",
-  },
-  {
-    name: "Lost Sock Memorial Day",
-    date: "May 9, 2022",
-    description:
-      "Come together as a community to honor all the lost socks that have helped us with our fitness quests. Donate a lost sock, and get a protein smoothie!",
-  },
-  {
-    name: "Hallowhoa",
-    date: "October 31, 2022",
-    description:
-      "Professional photographers will be taking photos all day. Get your photo taken and share your hard work on every social media platform you want!",
-  },
-];
-```
-
 ### Create controllers for each model
 
 Following the same file and folder structure as in class, create the correct files. For example, the `locations` resource should be in the `controllers/` directory with the name `locations.controller.js`.
@@ -209,7 +172,6 @@ Once you've built the route in each controller, you should be able to visit the 
 - http://localhost:3333/people
 - http://localhost:3333/plans
 - http://localhost:3333/equipment
-- http://localhost:3333/special-events
 
 ### Create a Catch-all/404 Route
 
@@ -217,7 +179,7 @@ Add a catch-all route so that when the visited URL does not match any of the rou
 
 ## Bonuses
 
-Create a `GET` route at `/locations/people` that organizes each person according to their location. The data outputted should look like the data below.
+Create a `GET` route at `/locations/people` that organizes each person according to their location. The data outputted should look like the data below. Study the data to figure out the connection.
 
 ```js
 [
@@ -246,7 +208,7 @@ Create a `GET` route at `/locations/people` that organizes each person according
     city: "New York",
     state: "NY",
     zip: "11011",
-    members: [
+    people: [
       {
         name: "Amandine",
         role: "member",

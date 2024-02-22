@@ -16,6 +16,7 @@ Your job will be to be to begin building a custom app that keeps track of numero
    npm install
    ```
 
+1. Create a server as you have done previously in class.
 1. Open up the repository in VSCode. Follow the instructions below to complete the Lab.
 
 ## Instructions
